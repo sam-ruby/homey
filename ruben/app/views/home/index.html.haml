@@ -1,2 +1,27 @@
-%p
-  Hello Maria
+%h4 Welcome to my Photo album hello
+
+/
+  this is where u put the comments
+
+/ 
+  What are u going to do here ?
+  Create a photo album. So in this page you list out
+  all the photos in the thumbnail format. 
+  When u click on a photo, show the next photo; and
+  when clicked on the previous arrow, u go to the
+  previous photo.
+  And there should be an option to exit when viewing in
+  single photo mode.
+  Thats it.
+
+  We are going to use Angular (The Javascript library;) to accomplish the Javsscript magic,
+  For styling purpose we will include the bootstrap library.
+  Both of them are installed as part of this app.
+
+%table
+  /  This is a for loop. The tr (which means table row would be repeated)
+  / This is very abstract; u need to expand this;
+  %tr{'ng-repeat'=>"photo_row in photo_rows"}
+    %td{'ng-repeat'=>"photo in photo_row"}
+      %img{'src'=>'/photos/{{photo.id}}'}
+
